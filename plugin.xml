@@ -3,6 +3,7 @@
     xmlns="http://apache.org/cordova/ns/plugins/1.0">
     <name>mediaNotifications</name>
     <description>receive activity from spotify and google play</description>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
     <engines>
         <engine name="cordova" version=">=3.9.0" />
     </engines>
@@ -14,11 +15,11 @@
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="mediaNotifications">
-                <param name="android-package" value="io.sevensignals.cordova.mediaNotifications" />
+                <param name="android-package" value="io.sevensignals.mediaNotifications.mediaNotifications" />
             </feature>
         </config-file>
 
         <source-file src="src/android/mediaNotifications.java"
-            target-dir="src/io/sevensignals/cordova/" />
+            target-dir="src/io/sevensignals/mediaNotifications/" />
     </platform>
 </plugin>
